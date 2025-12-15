@@ -13,7 +13,10 @@ namespace Mirosnicenco_Eugenia_Lab1.Controllers
         public IActionResult Info()
         {
             var student = new Student { Name = "Ana", Age = 21 };
-            return View(student);
+			ViewBag.Message = "Mesaj din Controller";
+			ViewData["Time"] = DateTime.Now;
+			return View(student);
         }
-    }
+
+	}
 }
